@@ -56,7 +56,7 @@ doubletFunc () {
 	
 	for((i=1;i<=${#doublet[@]};i++))
 	do
-
+		if((${doublet[$i]}==HH))
 		then
 			countHH=$((countHH+1))
 		elif((${doublet[$i]}==HT))
