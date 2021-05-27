@@ -33,8 +33,6 @@ singletFunc () {
 	tailCountPercent=`percentageCalculator $countTail`
 	echo "The percentage of HEAD in singlet dictionary is: " "$headCountPercent" "%"
 	echo "The percentage of TAIL in singlet dictionary is : $tailCountPercent %"
-
-	
 }
 
 doubletFunc () {
@@ -56,18 +54,18 @@ doubletFunc () {
 	echo -n "Doublet dictionary: "
 	for i in ${doublet[@]}; do echo $i; done | sort -u
 	
-	for((i=1;i<=${#singlet[@]};i++))
+	for((i=1;i<=${#doublet[@]};i++))
 	do
-		if((${singlet[$i]}==HH))
+		if((${doublett[$i]}==HH))
 		then
 			countHH=$((countHH+1))
-		elif((${singlet[$i]}==HT))
+		elif((${doublet[$i]}==HT))
 		then
 			countHT=$((countHT+1))
-		elif((${singlet[$i]}==TH))
+		elif((${doublet[$i]}==TH))
 		then
 			countTH=$((countTH+1))
-		elif((${singlet[$i]}==TT))
+		elif((${doublet[$i]}==TT))
 		then
 			countTT=$((countTT+1))
 		fi
