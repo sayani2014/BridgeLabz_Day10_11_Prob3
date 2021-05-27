@@ -33,8 +33,6 @@ singletFunc () {
 	tailCountPercent=`percentageCalculator $countTail`
 	echo "The percentage of HEAD in singlet dictionary is: " "$headCountPercent" "%"
 	echo "The percentage of TAIL in singlet dictionary is : $tailCountPercent %"
-
-	
 }
 
 doubletFunc () {
@@ -58,7 +56,7 @@ doubletFunc () {
 	
 	for((i=1;i<=${#doublet[@]};i++))
 	do
-		if((${doublet[$i]}==HH))
+
 		then
 			countHH=$((countHH+1))
 		elif((${doublet[$i]}==HT))
